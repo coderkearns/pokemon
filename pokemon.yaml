@@ -6,6 +6,7 @@
     hp: 55
     power: 0
     defense: 1
+
 - id: 2
   name: Charmander
   type: fire
@@ -14,6 +15,7 @@
     hp: 35
     power: 5
     defense: 0
+
 - id: 3
   name: Squirtle
   type: water
@@ -22,6 +24,7 @@
     hp: 45
     power: 1
     defense: 2
+
 - id: 4
   name: Bidoof
   type: normal
@@ -30,6 +33,7 @@
     hp: 50
     power: 0
     defense: 0
+
 - id: 5
   name: Alakazam
   type: normal
