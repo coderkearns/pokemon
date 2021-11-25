@@ -1,0 +1,66 @@
+'1':
+  id: 1
+  name: Tackle
+  type: normal
+  desc: The user tackles its opponent. Does 8-12 normal damage.
+  effectType: RANDINT
+  effect: [8, 12]
+
+'2':
+  id: 2
+  name: All-In Charge
+  type: normal
+  desc: The user charges with all their might. Might do more damage, but might do less. Does 4-16 normal damage.
+  effectType: RANDINT
+  effect: [4, 16]
+
+'3':
+  id: 3
+  name: Heal
+  type: normal
+  desc: The user heals itself. Heals 10-15 HP.
+  effectType: CUSTOM
+  effect: user.set('hp', user.hp + r.int(10, 15))
+
+'4':
+  id: 4
+  name: Vine Whip
+  type: grass
+  desc: The user whips out vines and slaps its opponent. Does 6-14 grass damage.
+  effectType: RANDINT
+  effect: [6, 14]
+
+'5':
+  id: 5
+  name: Ember
+  type: fire
+  desc: The user spits fire at its opponent. Does 6-14 fire damage.
+  effectType: RANDINT
+  effect: [6, 14]
+
+'6':
+  id: 6
+  name: Water Gun
+  type: water
+  desc: The user spits water at its opponent. Does 6-14 water damage.
+  effectType: RANDINT
+  effect: [6, 14]
+
+'7':
+  id: 7
+  name: Leech Seed
+  type: grass
+  desc: The user seeds the opponent, draining their HP each turn.
+  effectType: CUSTOM
+  effect: status.set(target, '_7_target', user), status.set(user, '_7_user', target)
+
+'8':
+  id: 8
+  name: Burn
+  type: fire
+  desc: The user blasts heat at the opponent. Does 5-10 fire damage. 50% chance to burn the opponent.
+  effectType: CUSTOM
+  effect: >-
+    db.set('shouldburn', r.int(1, 2) > 1),
+    target.hurt(r.int(5, 10), user, move.type),
+    status.set(target, 'burn', user) if db.shouldburn else None

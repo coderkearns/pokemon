@@ -1,0 +1,40 @@
+- id: 1
+  name: Bulbasaur
+  type: grass
+  moves: [1, 4, 7]
+  stats:
+    hp: 55
+    power: 0
+    defense: 1
+- id: 2
+  name: Charmander
+  type: fire
+  moves: [1, 5, 8]
+  stats:
+    hp: 35
+    power: 5
+    defense: 0
+- id: 3
+  name: Squirtle
+  type: water
+  moves: [1, 6]
+  stats:
+    hp: 45
+    power: 1
+    defense: 2
+- id: 4
+  name: Bidoof
+  type: normal
+  moves: [1, 2, 3]
+  stats:
+    hp: 50
+    power: 0
+    defense: 0
+- id: 5
+  name: Alakazam
+  type: normal
+  moves: [1, 3]
+  stats:
+    hp: 100
+    power: 0
+    defense: 0
