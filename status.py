@@ -17,7 +17,7 @@ class Sleep(Status):
     asleepMove = {
         "id": 0,
         "name": "Asleep",
-        "type": "Normal",
+        "type": "normal",
         "effectType": "CUSTOM",
         "effect": "None"
     }
